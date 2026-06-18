@@ -88,7 +88,7 @@ export default function AddBookmarkModal({ onClose, onAdd }: AddBookmarkModalPro
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="https://..."
                 required
-                className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+                className="w-full pl-9 pr-4 py-2.5 text-base text-slate-900 placeholder:text-slate-400 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function AddBookmarkModal({ onClose, onAdd }: AddBookmarkModalPro
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="아티클 제목..."
-                className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 text-base text-slate-900 placeholder:text-slate-400 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
               />
               <Sparkles className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-violet-300" />
             </div>
@@ -135,7 +135,7 @@ export default function AddBookmarkModal({ onClose, onAdd }: AddBookmarkModalPro
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={handleTagKeyDown}
               placeholder="태그 입력 후 Enter..."
-              className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 text-base text-slate-900 placeholder:text-slate-400 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
             />
             <div className="flex flex-wrap gap-1.5 mt-2">
               {SUGGESTED_TAGS.filter((t) => !selectedTags.includes(t)).map((tag) => (
