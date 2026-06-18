@@ -1,0 +1,71 @@
+{
+  "defaultMode": "auto",
+  "permissions": {
+    "allow": [
+      "Bash(node*)",
+      "Bash(npx*)",
+      "Bash(pnpm*)",
+      "Bash(npm*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(git show*)",
+      "Bash(git remote*)",
+      "Bash(git add*)",
+      "Bash(git stash*)",
+      "Bash(git fetch*)",
+      "Bash(ls*)",
+      "Bash(ll*)",
+      "Bash(cat*)",
+      "Bash(head*)",
+      "Bash(tail*)",
+      "Bash(find*)",
+      "Bash(grep*)",
+      "Bash(wc*)",
+      "Bash(pwd)",
+      "Bash(which*)",
+      "Bash(echo*)",
+      "Bash(printf*)",
+      "Bash(mkdir*)",
+      "Bash(touch*)",
+      "Bash(cp*)",
+      "Bash(mv*)",
+      "Bash(rm*)",
+      "Write(**)",
+      "Edit(**)",
+      "Read(**)",
+      "WebSearch",
+      "WebFetch",
+      "Agent"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard HEAD~[2-9]*)",
+      "Bash(rm -rf /bin*)",
+      "Bash(rm -rf /etc*)",
+      "Bash(rm -rf /lib*)",
+      "Bash(rm -rf /sbin*)",
+      "Bash(rm -rf /sys*)",
+      "Bash(rm -rf /usr*)",
+      "Bash(rm -rf /var*)",
+      "Bash(rm -rf /proc*)",
+      "Bash(rm -rf /dev*)",
+      "Bash(chmod 777*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude가 작업을 완료했습니다\" with title \"Claude Code\"'"
+          }
+        ]
+      }
+    ]
+  }
+}
